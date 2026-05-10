@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo do corpo da página */
+body {
+    background-color: #4a0e0e; /* Tom de vinho escuro */
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Cabeçalho com título e barra de texto */
+header {
+    text-align: center;
+    font-size: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Barra de texto horizontal abaixo do título */
+.about-bar {
+    background-color:  #b13939; 
+    width: 100%;
+    padding: 25px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Container principal com duas colunas */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px;
+}
+
+/* Imagem à esquerda da box de cadastro */
+.image-container {
+    flex: 1;
+    background-color:  #4a0e0e; 
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    
+}
+
+.image-container p {
+    font-style: italic;
+    color: white;
+    font-weight: bold;
+}
+
+.image-container img {
+    max-width: 90%; /* Garante que a imagem não ultrapasse a largura do container */
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do container */
+    object-fit: contain; /* Mantém a proporção da imagem sem distorcer */
+    border-radius: 8px;
+}
+
+/* Box de cadastro à direita */
+.registration-box {
+    background-color: #ffffff;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.registration-box h2 {
+    color:  #4a0e0e;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+/* Estilo dos campos do formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f0f4f8;
+    font-size: 1rem;
+}
+
+/* Botão de envio */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color:  #4a0e0e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color:  #4a0e0e;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .registration-box, .image-container {
+        width: 100%;
+    }
+}
