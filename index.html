@@ -16,10 +16,24 @@
                 <ul class="menu-index">
                     <li><a href="#hero">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li><a href="pages/jovi.html" class="btn-testar">Cadastre-se</a></li>
-                </ul>
-            </nav>
+                    <li><a href="pages/jovi.html"><button class="btn-testar">Cadastre-se</button></a></li>
+                        <div class="form-group">
+            <label>Nome do Vinho:</label>
+            <input type="text" id="nomeVinho" placeholder="Ex: Merlot">
         </div>
+
+        <div class="form-group">
+            <label>Ano de Fabricação:</label>
+            <input type="number" id="anoVinho" placeholder="Ex: 2018">
+        </div>
+
+        <div class="form-group">
+            <label>Quantidade em Estoque:</label>
+            <input type="number" id="qtdVinho" placeholder="Ex: 3">
+        </div>
+
+    <button onclick="processarCadastro()">Cadastrar e Analisar</button>
+                    
     </header>
     <main>
                <!-- Seção de destaque (Hero) com texto e imagem principal -->
@@ -60,7 +74,7 @@
                 <button id="fecharDevs" class="btn-fechar">&times;</button>
                 <h2>Desenvolvedores</h2>
                 <div class="lista-devs">
-                    <p>Ana Giazzi | anagazzio@smartStudy.com | RM: 569846 </p>
+                    <p>Anna Giazzi | anagazzio@smartStudy.com | RM: 569846 </p>
                     <p>Giulia Stella | giuliastella@smartStudy.com | RM: 568888 </p>
                 </div>
             </div>
@@ -92,6 +106,6 @@
         <p class="copyright">© 2026 Vinharia Agnello. Todos os direitos reservados.</p>
     </footer>
 
-
+<script src="src/js/script.js"></script>
 </body>
 </html>
