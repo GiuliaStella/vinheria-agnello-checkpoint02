@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- titulo da aba -->
+    <!-- titulo da aba -->
     <title>Site da Vinhearia Agnello CHP2</title>
     <link rel="stylesheet" href="src/css/style.css">
 </head>
+
 <body>
-        <!-- navegacao da pagina da parte superior -->
+    <!-- navegacao da pagina da parte superior -->
     <header>
         <div class="conjunto-header">
             <h1 class="logo">Vinharia Agnello</h1>
@@ -16,40 +18,68 @@
                 <ul class="menu-index">
                     <li><a href="#hero">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li><a href="pages/jovi.html" class="btn-testar">Cadastre-se</a></li>
+                    <li><a href="#cadastre-se" class="btn-testar">Cadastre-se</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-               <!-- Seção de destaque (Hero) com texto e imagem principal -->
+        <!-- Seção de destaque (Hero) com texto e imagem principal -->
         <section class="hero" id="hero">
             <div class="hero-conteudo">
                 <p class="hero-novo">.</p>
                 <h2>Sistema de Avaliação de Estoque e
                     Tendência de Vinhos</h2>
-                <p class="hero-testo">Fundada em São Paulo há mais de 15 anos, a Vinheria Agnello é uma empresa familiar dirigida pelo proprietário Giulio e sua filha Bianca.
-                    Com uma vasta gama de rótulos nacionais e internacionais, nossos especialistas oferecem atendimento consultivo
-                    para cada cliente — porque cada vinho conta uma história.</p>
+                <p class="hero-texto">Fundada em São Paulo há mais de 15 anos, a Vinheria Agnello é uma empresa familiar
+                    dirigida pelo proprietário Giulio e sua filha Bianca.
+                    Contando com uma loja física que dispõe de uma vasta gama de rótulos nacionais e internacionais, a
+                    empresa emprega seis funcionários distribuídos entre administração,
+                    estoque e vendas. Tanto os proprietários quanto seus três vendedores são profundos conhecedores do
+                    mundo dos vinhos, utilizando esse saber no atendimento aos clientes.
+                    Essa troca de conhecimento, com caráter de consultoria, é um dos principais pontos fortes da
+                    vinheria.</p>
                 <div class="hero-botoes">
                     <a href="#contato" class="btn-aviso">Cadastrar Vinho</a>
 
                 </div>
             </div>
             <div class="hero-foto">
+                <!-- o efeito de bolinha -->
+                <div id="particles-js"></div>
 
-                <img src="./src/assets/ai_brain_neural.png" alt="IA Brain" class="brain-image">
+                <img src="./src/assets/wine.png">
 
             </div>
         </section>
-         <!-- Seção final com o botão que chama o Modal via JS -->
+        <!-- Box de Cadastro -->
+        <section class="registration-box" id="cadastre-se">
+            <h2>Cadastro de Usuário</h2>
+            <form id="cadastroForm">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@provedor.com" required>
+                </div>
+                <!-- botao que envia o formulario -->
+                <button type="submit" class="btn-submit">Iniciar Cadastro</button>
+            </form>
+        </section>
+
+
+        <!-- Seção final com o botão que chama o Modal via JS -->
         <section id="contato">
             <div class="contato-container">
                 <h2>Contate-nos para saber mais</h2>
-                <p>Estamos em constante evolução. O <strong>JOVI Smart Study</strong> é um projeto desenvolvido por
-                    estudantes apaixonados por tecnologia e inovação acadêmica. Tem alguma sugestão, crítica ou gostaria
-                    de colaborar? Nossa equipe de desenvolvedores está pronta para ouvir você.</p>
-                <button id="abrirdevs">contato</button>
+                <button id="abrirdevs">Contato</button>
             </div>
         </section>
 
@@ -93,5 +123,38 @@
     </footer>
 
 
+        <!-- Biblioteca oficial do efeito de bolinhas -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 800, "density": { "enable": true, "value_area": 600 } },
+                "color": { "value": "#330505" }, 
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.1, "random": false },
+                "size": { "value": 20, "random": true },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 10,
+                    "color": "#330505",
+                    "opacity": 0.01,
+                    "width": 0.1
+                },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" }, /* Conecta ao passar o mouse */
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } } }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+
 </body>
+
 </html>
