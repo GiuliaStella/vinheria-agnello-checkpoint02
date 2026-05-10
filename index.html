@@ -1,11 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <!-- titulo da aba -->
+    <title>Site da Vinhearia Agnello CHP2</title>
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    
+        <!-- navegacao da pagina da parte superior -->
+    <header>
+        <div class="conjunto-header">
+            <h1 class="logo">Vinharia Agnello</h1>
+            <nav> <!-- Links de navegação ancorados (levam para partes da mesma página) -->
+                <ul class="menu-index">
+                    <li><a href="#hero">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="pages/jovi.html" class="btn-testar">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+               <!-- Seção de destaque (Hero) com texto e imagem principal -->
+        <section class="hero" id="hero">
+            <div class="hero-conteudo">
+                <p class="hero-novo">.</p>
+                <h2>Sistema de Avaliação de Estoque e
+                    Tendência de Vinhos</h2>
+                <p class="hero-testo">Fundada em São Paulo há mais de 15 anos, a Vinheria Agnello é uma empresa familiar dirigida pelo proprietário Giulio e sua filha Bianca.
+                    Com uma vasta gama de rótulos nacionais e internacionais, nossos especialistas oferecem atendimento consultivo
+                    para cada cliente — porque cada vinho conta uma história.</p>
+                <div class="hero-botoes">
+                    <a href="#contato" class="btn-aviso">Cadastrar Vinho</a>
+
+                </div>
+            </div>
+            <div class="hero-foto">
+
+                <img src="./src/assets/ai_brain_neural.png" alt="IA Brain" class="brain-image">
+
+            </div>
+        </section>
+         <!-- Seção final com o botão que chama o Modal via JS -->
+        <section id="contato">
+            <div class="contato-container">
+                <h2>Contate-nos para saber mais</h2>
+                <p>Estamos em constante evolução. O <strong>JOVI Smart Study</strong> é um projeto desenvolvido por
+                    estudantes apaixonados por tecnologia e inovação acadêmica. Tem alguma sugestão, crítica ou gostaria
+                    de colaborar? Nossa equipe de desenvolvedores está pronta para ouvir você.</p>
+                <button id="abrirdevs">contato</button>
+            </div>
+        </section>
+
+        <!-- Modal dos devs: começa invisível no CSS e aparece ao clicar no botão -->
+        <section id="modalDevs" class="janela-modal">
+            <div class="conteudo-modal">
+                <!-- Botão de fechar (X) -->
+                <button id="fecharDevs" class="btn-fechar">&times;</button>
+                <h2>Desenvolvedores</h2>
+                <div class="lista-devs">
+                    <p>Ana Giazzi | anagazzio@smartStudy.com | RM: 569846 </p>
+                    <p>Giulia Stella | giuliastella@smartStudy.com | RM: 568888 </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <!-- conteudo do rodape da pagina -->
+        <div class="footerconteudo">
+            <div class="info">
+                <h3>🍷</h3>
+                <p>Cadastro e Controle de Vinhos</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="redes">
+                <h4>Acompanhe nosso repositório</h4>
+                <a href="https://github.com/GiuliaStella/vinheria-agnello-checkpoint02.git" target="_blank">
+                    <span>Github: Vinharia Agnello</span>
+                </a>
+            </div>
+        </div>
+        <!-- Rodapé simples com ano e copyright -->
+        <p class="copyright">© 2026 Vinharia Agnello. Todos os direitos reservados.</p>
+    </footer>
+
+
 </body>
 </html>
