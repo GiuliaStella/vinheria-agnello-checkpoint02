@@ -119,3 +119,7 @@ botao.addEventListener('submit', function (event) {
             // Saída
             exibirDadosVinho(vinhoObjeto);
         }
+
+
+
+

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- titulo da aba -->
+    <!-- titulo da aba -->
     <title>Site da Vinhearia Agnello CHP2</title>
     <link rel="stylesheet" href="src/css/style.css">
 </head>
+
 <body>
-        <!-- navegacao da pagina da parte superior -->
+    <!-- navegacao da pagina da parte superior -->
     <header>
         <div class="conjunto-header">
             <h1 class="logo">Vinharia Agnello</h1>
@@ -16,60 +18,79 @@
                 <ul class="menu-index">
                     <li><a href="#hero">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
-            <li><a href="pages/jovi.html"><button class="btn-testar">Cadastre-se</button></a></li>
-                        <div class="form-group">
-            <label>Nome do Vinho:</label>
-            <input type="text" id="nomeVinho" placeholder="Ex: Merlot">
-        </div>
-
-        <div class="form-group">
-            <label>Ano de Fabricação:</label>
-            <input type="number" id="anoVinho" placeholder="Ex: 2018">
-        </div>
-
-        <div class="form-group">
-            <label>Quantidade em Estoque:</label>
-            <input type="number" id="qtdVinho" placeholder="Ex: 3">
-        </div>
-
-    <button onclick="processarCadastro()">Cadastrar e Analisar</button>
-                    
-
-                    <li><a href="pages/jovi.html" class="btn-testar">Cadastre-se</a></li>
+                    <li><a href="#" id="abrirCadastre-se" class="btn-cadastre">Cadastre-se</a></li>
                 </ul>
             </nav>
         </div>
 
     </header>
     <main>
-               <!-- Seção de destaque (Hero) com texto e imagem principal -->
+        <!-- Seção hero com texto e imagem principal -->
         <section class="hero" id="hero">
             <div class="hero-conteudo">
                 <p class="hero-novo">.</p>
                 <h2>Sistema de Avaliação de Estoque e
                     Tendência de Vinhos</h2>
-                <p class="hero-testo">Fundada em São Paulo há mais de 15 anos, a Vinheria Agnello é uma empresa familiar dirigida pelo proprietário Giulio e sua filha Bianca.
-                    Com uma vasta gama de rótulos nacionais e internacionais, nossos especialistas oferecem atendimento consultivo
-                    para cada cliente — porque cada vinho conta uma história.</p>
+                <p class="hero-texto">Fundada em São Paulo há mais de 15 anos, a Vinheria Agnello é uma empresa familiar
+                    dirigida pelo proprietário Giulio e sua filha Bianca.
+                    Contando com uma loja física que dispõe de uma vasta gama de rótulos nacionais e internacionais, a
+                    empresa emprega seis funcionários distribuídos entre administração,
+                    estoque e vendas. Tanto os proprietários quanto seus três vendedores são profundos conhecedores do
+                    mundo dos vinhos, utilizando esse saber no atendimento aos clientes.
+                    Essa troca de conhecimento, com caráter de consultoria, é um dos principais pontos fortes da
+                    vinheria.</p>
                 <div class="hero-botoes">
-                    <a href="#contato" class="btn-aviso">Cadastrar Vinho</a>
+                    <a href="#" class="btn-vinho" id="abrirCadastroVinho">Cadastrar Vinho</a>
 
                 </div>
             </div>
             <div class="hero-foto">
+                <!-- o efeito de bolinha -->
+                <div id="particles-js"></div>
 
-                <img src="./src/assets/ai_brain_neural.png" alt="IA Brain" class="brain-image">
+                <img src="./src/assets/wine.png">
 
             </div>
         </section>
-         <!-- Seção final com o botão que chama o Modal via JS -->
+
+
+
+
+
+
+
+
+<!-- Modal de Cadastro-se-->
+<section id="modalCadastre-se" class="janela-modal">
+
+    <div class="conteudo-modal">
+
+        <button type="button" id="fecharCadastre-se" class="btn-fechar"> &times;</button>
+        <h2>Cadastre-se</h2>
+        <div class="form-group"><label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+        </div>
+
+        <div class="form-group"><label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
+        </div>
+
+        <div class="form-group"><label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail">
+        </div>
+        <button id="iniciarCadastroUsuario" class="btn-submit">Iniciar Cadastro </button>
+    </div>
+</section>
+
+
+
+
+
+        <!-- modal contato-->
         <section id="contato">
             <div class="contato-container">
                 <h2>Contate-nos para saber mais</h2>
-                <p>Estamos em constante evolução. O <strong>JOVI Smart Study</strong> é um projeto desenvolvido por
-                    estudantes apaixonados por tecnologia e inovação acadêmica. Tem alguma sugestão, crítica ou gostaria
-                    de colaborar? Nossa equipe de desenvolvedores está pronta para ouvir você.</p>
-                <button id="abrirdevs">contato</button>
+                <button id="abrirdevs">Contato</button>
             </div>
         </section>
 
@@ -77,7 +98,7 @@
         <section id="modalDevs" class="janela-modal">
             <div class="conteudo-modal">
                 <!-- Botão de fechar (X) -->
-                <button id="fecharDevs" class="btn-fechar">&times;</button>
+                <button type="button" id="fecharDevs" class="btn-fechar">&times;</button>
                 <h2>Desenvolvedores</h2>
                 <div class="lista-devs">
                     <p>Anna Giazzi | anagazzio@smartStudy.com | RM: 569846 </p>
@@ -85,6 +106,26 @@
                 </div>
             </div>
         </section>
+
+
+
+        <!-- Modal de Cadastro de Vinho -->
+        <section id="modalCadastroVinho" class="janela-modal">
+            <div class="conteudo-modal">
+                <button type="button" id="fecharCadastroVinho" class="btn-fechar">&times;</button>
+                <h2>Cadastrar Vinho</h2>
+                <p>
+                    Clique abaixo para iniciar o cadastro via prompt.
+                </p>
+
+                <button id="iniciarCadastroVinho" class="btn-submit">
+                    Iniciar Cadastro
+                </button>
+
+            </div>
+
+        </section>
+
 
     </main>
     <footer>
@@ -113,6 +154,39 @@
     </footer>
 
 
-<script src="src/js/script.js"></script>
+    <!-- Biblioteca oficial do efeito de bolinhas -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 800, "density": { "enable": true, "value_area": 5400 } },
+                "color": { "value": "#8a0000" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.1, "random": false },
+                "size": { "value": 20, "random": true },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 10,
+                    "color": "#8a0000",
+                    "opacity": 0.01,
+                    "width": 0.1
+                },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" }, /* Conecta ao passar o mouse */
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } } }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+    <script src="src/js/script.js"></script>
+    <script src="src/js/janelamodal.js"></script>
 </body>
+
 </html>
