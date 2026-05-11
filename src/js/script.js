@@ -25,16 +25,16 @@ botao.addEventListener('submit', function (event) {
 
 
     // ETAPA 2: Solicitar as informações do produto via prompt
-    const nomeProduto = prompt("Digite o nome do rótulo do vinho:");
-    const tipoProduto = prompt("Digite o tipo do vinho(Tinto, Branco ou Rosé):");
-    const safraOuAno = prompt("Digite a safra ou ano de fabricação:");
-    const quantidade = prompt("Digite a quantidade em estoque:");
+    //const nomeProduto = prompt("Digite o nome do rótulo do vinho:");
+   // const tipoProduto = prompt("Digite o tipo do vinho(Tinto, Branco ou Rosé):");
+    //const safraOuAno = prompt("Digite a safra ou ano de fabricação:");
+    //const quantidade = prompt("Digite a quantidade em estoque:");
 
     // Validação dos prompts: impede que continue se algum campo estiver vazio
-    if (!nomeProduto || !tipoProduto || !safraOuAno || !quantidade) {
-        alert("Todos os campos do produto são obrigatórios! Tente novamente.");
-        return;
-    }
+    //if (!nomeProduto || !tipoProduto || !safraOuAno || !quantidade) {
+       // alert("Todos os campos do produto são obrigatórios! Tente novamente.");
+       // return;
+   // }
 
     // Alerta antes de exibir no console
     alert("A seguir, veja os detalhes do vinho no console.");
@@ -119,3 +119,50 @@ botao.addEventListener('submit', function (event) {
             // Saída
             exibirDadosVinho(vinhoObjeto);
         }
+
+    //função para mostrar os formulários de cadastro    
+    function mostrarFormularios() {
+        document.getElementById('secaoCadastro').style.display = 'block';
+        document.getElementById('secaoRelatorio').style.display = 'none';
+    }
+    //para analisar os cadastros feitos
+    function iniciarSistema() {
+    //armazenamento dos resultados (variáveis acumuladoras)
+    let totalCadastros = 0;
+    let estoqueBaixo = 0;
+    let safraMaisAntiga = 9999; 
+    let nomeMaisAntigo = "";
+    let continuar = "sim";//controle do loop
+
+    while (continuar === "sim") {
+        // Captura de dados (Variáveis únicas sendo sobrescritas a cada volta)
+        let nomeAtual = prompt("Digite o nome do vinho:");
+        let safraAtual = parseInt(prompt("Digite o ano da safra:"));
+        let estoqueAtual = parseInt(prompt("Digite a quantidade em estoque:"));
+
+        //Contagem de cadastros
+        totalCadastros = totalCadastros + 1;
+
+        //Verificação de estoque baixo
+        if (estoqueAtual < 5) {
+            estoqueBaixo = estoqueBaixo + 1;
+        }
+
+        // 3. Comparação manual da safra (Lógica do "Mais Antigo")
+        if (safraAtual < safraMaisAntiga) {
+            safraMaisAntiga = safraAtual;
+            nomeMaisAntigo = nomeAtual;
+        }
+
+        // Pergunta se o usuário quer continuar
+        continuar = prompt("Deseja cadastrar outro vinho? (sim/nao)").toLowerCase();
+    }
+
+    // EXIBIÇÃO DOS RESULTADOS
+    document.getElementById('secaoRelatorio').style.display = 'block';
+    document.getElementById('btnIniciar').style.display = 'none';
+
+    document.getElementById('resTotal').innerText = totalCadastros;
+    document.getElementById('resBaixo').innerText = estoqueBaixo;
+    document.getElementById('resAntigo').innerText = nomeMaisAntigo + " (Ano: " + safraMaisAntiga + ")";
+}
