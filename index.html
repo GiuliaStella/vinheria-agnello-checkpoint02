@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- titulo da aba -->
+    <!-- titulo da aba -->
     <title>Site da Vinhearia Agnello CHP2</title>
+
+    <!-- link de uma fonte bacana p logo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <!-- link do css -->
     <link rel="stylesheet" href="src/css/style.css">
 </head>
+
 <body>
-        <!-- navegacao da pagina da parte superior -->
+    <!-- navegacao da pagina da parte superior -->
     <header>
         <div class="conjunto-header">
             <h1 class="logo">Vinharia Agnello</h1>
@@ -17,6 +26,25 @@
                     <li><a href="#hero">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
 
+                    <li><a href="pages/jovi.html"><button class="btn-testar">Cadastre-se</button></a></li>
+                        <div class="form-group">
+            <label>Nome do Vinho:</label>
+            <input type="text" id="nomeVinho" placeholder="Ex: Merlot">
+        </div>
+
+        <div class="form-group">
+            <label>Ano de Fabricação:</label>
+            <input type="number" id="anoVinho" placeholder="Ex: 2018">
+        </div>
+
+        <div class="form-group">
+            <label>Quantidade em Estoque:</label>
+            <input type="number" id="qtdVinho" placeholder="Ex: 3">
+        </div>
+
+    <button onclick="processarCadastro()">Cadastrar e Analisar</button>
+                    
+
                     <li><a href="pages/jovi.html" class="btn-testar">Cadastre-se</a></li>
                 </ul>
             </nav>
@@ -24,43 +52,40 @@
 
     </header>
     <main>
-               <!-- Seção de destaque (Hero) com texto e imagem principal -->
+        <!-- Seção hero com texto e imagem principal -->
         <section class="hero" id="hero">
             <div class="hero-conteudo">
-                <p class="hero-novo">.</p>
+
                 <h2>Sistema de Avaliação de Estoque e
                     Tendência de Vinhos</h2>
-                <p class="hero-testo">Fundada em São Paulo há mais de 15 anos, a Vinheria Agnello é uma empresa familiar dirigida pelo proprietário Giulio e sua filha Bianca.
-                    Com uma vasta gama de rótulos nacionais e internacionais, nossos especialistas oferecem atendimento consultivo
-                    para cada cliente — porque cada vinho conta uma história.</p>
+                <p class="hero-texto">Fundada em São Paulo há mais de 15 anos, a Vinheria Agnello é uma empresa familiar
+                    dirigida pelo proprietário Giulio e sua filha Bianca.
+                    Contando com uma loja física que dispõe de uma vasta gama de rótulos nacionais e internacionais, a
+                    empresa emprega seis funcionários distribuídos entre administração,
+                    estoque e vendas. Tanto os proprietários quanto seus três vendedores são profundos conhecedores do
+                    mundo dos vinhos, utilizando esse saber no atendimento aos clientes.
+                    Essa troca de conhecimento, com caráter de consultoria, é um dos principais pontos fortes da
+                    vinheria.</p>
                 <div class="hero-botoes">
                     <a href="#contato" class="btn-aviso">Cadastrar Vinho</a>
-                        <div id="secaoCadastro" style="display: none; margin-top: 20px;">
-                        <h3>Cadastro</h3>
-                        <input type="text" id="nome" placeholder="Nome do Vinho">
-                        <button onclick="salvarECalcular()">Finalizar Cadastro</button>
-                        </div>
-                        <div id="secaoRelatorio" style="display: none; margin-top: 20px; border-top: 1px solid #000;">
-                            <h3>Resultados</h3>
-                            <p id="feedback"></p>
-                        </div>
 
                 </div>
             </div>
             <div class="hero-foto">
+                <!-- o efeito de bolinha -->
+                <div id="particles-js"></div>
 
-                <img src="./src/assets/ai_brain_neural.png" alt="IA Brain" class="brain-image">
+                <img src="./src/assets/wine.png">
 
             </div>
         </section>
-         <!-- Seção final com o botão que chama o Modal via JS -->
+
+
+        <!-- modal contato-->
         <section id="contato">
             <div class="contato-container">
                 <h2>Contate-nos para saber mais</h2>
-                <p>Estamos em constante evolução. O <strong>JOVI Smart Study</strong> é um projeto desenvolvido por
-                    estudantes apaixonados por tecnologia e inovação acadêmica. Tem alguma sugestão, crítica ou gostaria
-                    de colaborar? Nossa equipe de desenvolvedores está pronta para ouvir você.</p>
-                <button id="abrirdevs">contato</button>
+                <button id="abrirdevs">Contato</button>
             </div>
         </section>
 
@@ -68,16 +93,19 @@
         <section id="modalDevs" class="janela-modal">
             <div class="conteudo-modal">
                 <!-- Botão de fechar (X) -->
-                <button id="fecharDevs" class="btn-fechar">&times;</button>
-                <h2>Desenvolvedores</h2>
+                <button type="button" id="fecharDevs" class="btn-fechar">&times;</button>
+                <h2>Desenvolvedoras</h2>
                 <div class="lista-devs">
 
                     <p>Anna Giazzi | anagazzio@smartStudy.com | RM: 569846 </p>
+
+                    <p>Ana Giazzi | anagazzio@smartStudy.com | RM: 569846 </p>
 
                     <p>Giulia Stella | giuliastella@smartStudy.com | RM: 568888 </p>
                 </div>
             </div>
         </section>
+
 
     </main>
     <footer>
@@ -108,5 +136,8 @@
 
 <script src="src/js/script.js"></script>
 
+
+
 </body>
+
 </html>

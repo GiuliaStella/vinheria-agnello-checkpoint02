@@ -4,9 +4,9 @@
     --black: #000000;
     --body: #07070a;
     --dark: #131313;
-    --vinho: #330505;;
+    --vinho: #330505;
     --vermelho: #8a0000;
-    --grad-text: linear-gradient(90deg, #ff0606, #b00000, #950505);
+    --grad-text: linear-gradient(90deg, #601414, #5e0000, #750c0cab);
     --white: #ffffff;
     --gray: #939393;
     /* Tempo da animação de transição */
@@ -42,9 +42,10 @@ header {
 
 /* Estilo do texto da logo */
 .logo {
-    font-family: var(--font);
-    font-size: 2rem;
+    font-family: "Lobster Two";
+    font-size: 3rem;
     font-weight: 900;
+    padding-left: 60px;
     background: var(--grad-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -73,19 +74,21 @@ header {
 }
 
 /* Botão de destaque do menu */
-.btn-testar {
+.btn-cadastre {
     display: inline-block;
     background: var(--grad-text);
     color: var(--white);
     padding: 8px 18px;
-    border-radius: 20px;
+    border-radius: 12px;
     font-weight: 400px;
     transition: transform 0.2s, background-color 0.2s;
 }
+
 /* transformacao do botao quando passa o mousse */
-.btn-testar:hover {
+.btn-cadastre:hover {
     transform: translateY(-2px);
 }
+
 /* CONFIGURAÇÕES DO CORPO */
 body {
     background-color: var(--body);
@@ -119,16 +122,8 @@ body {
     max-width: 560px;
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
     gap: 15px;
-}
-
-/* tesxto do hero encima do h2 */
-.hero-novo {
-    color: var(--azul);
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .hero h2 {
@@ -139,38 +134,57 @@ body {
     color: var(--white);
 }
 
-.hero-testo {
-    font-size: 1.1rem;
+.hero-texto {
+    font-size: 0.9rem;
     color: var(--gray);
     margin-bottom: 25px;
 }
+#particles-js {
+    position: absolute;
+    right: -900px;
+    width: 50%;
+    /* Metade da tela */
+    height: 800px;
+    top: 20;
+    bottom: 0;
+    right: 0;
+    /* Lado direito */
+  
+    background-color: transparent;
+}
+
 
 /* Bloco da imagem da seção hero */
 .hero-foto {
-
+    max-width: 400px;
+    padding-right: 100px;
     display: flex;
+    margin-top: 20px;
     justify-content: center;
     align-items: center;
 }
 
 .hero-foto img {
-    max-width: 100%;
+    width: 250px;
     height: auto;
-    filter: drop-shadow(0 0 20px rgba(79, 142, 247, 0.2));
+    border-radius: 12px;
+    filter: drop-shadow(0 0 20px rgba(66, 0, 0, 0.64));
 }
 
+
 /* BOTÃO DE CADASTRAR VINHO */
-.btn-aviso {
+.btn-vinho {
     display: inline-block;
     background: var(--grad-text);
     color: var(--white);
     padding: 8px 20px;
-    border-radius: 20px;
+    border-radius: 12px;
     font-weight: 500;
     text-decoration: none;
     transition: transform 0.2s, background-color 0.2s;
 }
-.btn-aviso:hover {
+
+.btn-vinho:hover {
     transform: translateY(-2px);
 }
 
@@ -180,6 +194,68 @@ h2 {
     margin-bottom: 30px;
     font-size: 2rem;
 }
+
+/* Box de cadastro à direita */
+.registration-box {
+    background-color: var(--gray);
+    color: var(--vinho);
+    padding: 20px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 10px 25px rgba(69, 5, 5, 0.656);
+
+    margin: 120px auto 40px auto;
+    max-width: 350px;
+
+}
+
+.registration-box h2 {
+    color: var(--vinho);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+/* Estilo dos campos do formulário */
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #d8dee5;
+    font-size: 1rem;
+}
+
+/* Botão de envio */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--vinho);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: var(--vermelho);
+}
+
+
 /* CONTATO */
 #contato {
     padding: 70px 20px;
@@ -190,12 +266,6 @@ h2 {
 
 #contato h2 {
     color: var(--white);
-}
-
-#contato p {
-    color: var(--white);
-    max-width: 600px;
-    margin: 0 auto 28px;
 }
 
 /* Botão que abre a lista de desenvolvedores */
@@ -292,6 +362,7 @@ footer {
     color: var(--white);
     margin-bottom: 8px;
 }
+
 .info p {
     color: var(--gray);
     font-size: 0.85rem;
