@@ -42,10 +42,10 @@ header {
 
 /* Estilo do texto da logo */
 .logo {
-    font-family: var(--font);
-    font-size: 2rem;
+    font-family: "Lobster Two";
+    font-size: 3rem;
     font-weight: 900;
-    padding-left: 30px;
+    padding-left: 60px;
     background: var(--grad-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -122,16 +122,8 @@ body {
     max-width: 560px;
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
     gap: 15px;
-}
-
-/* tesxto do hero encima do h2 */
-.hero-novo {
-    color: var(--azul);
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .hero h2 {
@@ -167,6 +159,7 @@ body {
     max-width: 400px;
     padding-right: 100px;
     display: flex;
+    margin-top: 20px;
     justify-content: center;
     align-items: center;
 }
