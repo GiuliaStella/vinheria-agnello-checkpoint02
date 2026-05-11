@@ -74,7 +74,7 @@ header {
 }
 
 /* Botão de destaque do menu */
-.btn-testar {
+.btn-cadastre {
     display: inline-block;
     background: var(--grad-text);
     color: var(--white);
@@ -85,7 +85,7 @@ header {
 }
 
 /* transformacao do botao quando passa o mousse */
-.btn-testar:hover {
+.btn-cadastre:hover {
     transform: translateY(-2px);
 }
 
@@ -154,6 +154,7 @@ body {
     /* Metade da tela */
     height: 800px;
     top: 20;
+    bottom: 0;
     right: 0;
     /* Lado direito */
   
@@ -179,7 +180,7 @@ body {
 
 
 /* BOTÃO DE CADASTRAR VINHO */
-.btn-aviso {
+.btn-vinho {
     display: inline-block;
     background: var(--grad-text);
     color: var(--white);
@@ -190,7 +191,7 @@ body {
     transition: transform 0.2s, background-color 0.2s;
 }
 
-.btn-aviso:hover {
+.btn-vinho:hover {
     transform: translateY(-2px);
 }
 

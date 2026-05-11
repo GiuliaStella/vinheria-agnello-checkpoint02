@@ -18,13 +18,14 @@
                 <ul class="menu-index">
                     <li><a href="#hero">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li><a href="#cadastre-se" class="btn-testar">Cadastre-se</a></li>
+                    <li><a href="#" id="abrirCadastre-se" class="btn-cadastre">Cadastre-se</a></li>
                 </ul>
             </nav>
         </div>
+
     </header>
     <main>
-        <!-- Seção de destaque (Hero) com texto e imagem principal -->
+        <!-- Seção hero com texto e imagem principal -->
         <section class="hero" id="hero">
             <div class="hero-conteudo">
                 <p class="hero-novo">.</p>
@@ -39,7 +40,7 @@
                     Essa troca de conhecimento, com caráter de consultoria, é um dos principais pontos fortes da
                     vinheria.</p>
                 <div class="hero-botoes">
-                    <a href="#contato" class="btn-aviso">Cadastrar Vinho</a>
+                    <a href="#" class="btn-vinho" id="abrirCadastroVinho">Cadastrar Vinho</a>
 
                 </div>
             </div>
@@ -51,31 +52,41 @@
 
             </div>
         </section>
-        <!-- Box de Cadastro -->
-        <section class="registration-box" id="cadastre-se">
-            <h2>Cadastro de Usuário</h2>
-            <form id="cadastroForm">
-                <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="sobrenome">Sobrenome:</label>
-                    <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@provedor.com" required>
-                </div>
-                <!-- botao que envia o formulario -->
-                <button type="submit" class="btn-submit">Iniciar Cadastro</button>
-            </form>
-        </section>
 
 
-        <!-- Seção final com o botão que chama o Modal via JS -->
+
+
+
+
+
+
+<!-- Modal de Cadastro-se-->
+<section id="modalCadastre-se" class="janela-modal">
+
+    <div class="conteudo-modal">
+
+        <button type="button" id="fecharCadastre-se" class="btn-fechar"> &times;</button>
+        <h2>Cadastre-se</h2>
+        <div class="form-group"><label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+        </div>
+
+        <div class="form-group"><label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
+        </div>
+
+        <div class="form-group"><label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail">
+        </div>
+        <button id="iniciarCadastroUsuario" class="btn-submit">Iniciar Cadastro </button>
+    </div>
+</section>
+
+
+
+
+
+        <!-- modal contato-->
         <section id="contato">
             <div class="contato-container">
                 <h2>Contate-nos para saber mais</h2>
@@ -87,14 +98,34 @@
         <section id="modalDevs" class="janela-modal">
             <div class="conteudo-modal">
                 <!-- Botão de fechar (X) -->
-                <button id="fecharDevs" class="btn-fechar">&times;</button>
+                <button type="button" id="fecharDevs" class="btn-fechar">&times;</button>
                 <h2>Desenvolvedores</h2>
                 <div class="lista-devs">
-                    <p>Ana Giazzi | anagazzio@smartStudy.com | RM: 569846 </p>
+                    <p>Anna Giazzi | anagazzio@smartStudy.com | RM: 569846 </p>
                     <p>Giulia Stella | giuliastella@smartStudy.com | RM: 568888 </p>
                 </div>
             </div>
         </section>
+
+
+
+        <!-- Modal de Cadastro de Vinho -->
+        <section id="modalCadastroVinho" class="janela-modal">
+            <div class="conteudo-modal">
+                <button type="button" id="fecharCadastroVinho" class="btn-fechar">&times;</button>
+                <h2>Cadastrar Vinho</h2>
+                <p>
+                    Clique abaixo para iniciar o cadastro via prompt.
+                </p>
+
+                <button id="iniciarCadastroVinho" class="btn-submit">
+                    Iniciar Cadastro
+                </button>
+
+            </div>
+
+        </section>
+
 
     </main>
     <footer>
@@ -123,20 +154,20 @@
     </footer>
 
 
-        <!-- Biblioteca oficial do efeito de bolinhas -->
+    <!-- Biblioteca oficial do efeito de bolinhas -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script>
+    <script>
         particlesJS("particles-js", {
             "particles": {
-                "number": { "value": 800, "density": { "enable": true, "value_area": 600 } },
-                "color": { "value": "#330505" }, 
+                "number": { "value": 800, "density": { "enable": true, "value_area": 5400 } },
+                "color": { "value": "#8a0000" },
                 "shape": { "type": "circle" },
                 "opacity": { "value": 0.1, "random": false },
                 "size": { "value": 20, "random": true },
                 "line_linked": {
                     "enable": true,
                     "distance": 10,
-                    "color": "#330505",
+                    "color": "#8a0000",
                     "opacity": 0.01,
                     "width": 0.1
                 },
@@ -154,7 +185,8 @@
         });
     </script>
 
-
+    <script src="src/js/script.js"></script>
+    <script src="src/js/janelamodal.js"></script>
 </body>
 
 </html>
