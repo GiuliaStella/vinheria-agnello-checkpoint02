@@ -25,31 +25,10 @@
                 <ul class="menu-index">
                     <li><a href="#hero">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
-
-                    <li><a href="pages/jovi.html"><button class="btn-testar">Cadastre-se</button></a></li>
-                        <div class="form-group">
-            <label>Nome do Vinho:</label>
-            <input type="text" id="nomeVinho" placeholder="Ex: Merlot">
-        </div>
-
-        <div class="form-group">
-            <label>Ano de Fabricação:</label>
-            <input type="number" id="anoVinho" placeholder="Ex: 2018">
-        </div>
-
-        <div class="form-group">
-            <label>Quantidade em Estoque:</label>
-            <input type="number" id="qtdVinho" placeholder="Ex: 3">
-        </div>
-
-    <button onclick="processarCadastro()">Cadastrar e Analisar</button>
-                    
-
-                    <li><a href="pages/jovi.html" class="btn-testar">Cadastre-se</a></li>
+                    <li><a  href="#" id="abrirCadastre-se" class="btn-cadastre">Cadastre-se</a></li>
                 </ul>
             </nav>
         </div>
-
     </header>
     <main>
         <!-- Seção hero com texto e imagem principal -->
@@ -67,7 +46,7 @@
                     Essa troca de conhecimento, com caráter de consultoria, é um dos principais pontos fortes da
                     vinheria.</p>
                 <div class="hero-botoes">
-                    <a href="#contato" class="btn-aviso">Cadastrar Vinho</a>
+                    <a href="#" class="btn-vinho" id="abrirCadastroVinho">Cadastrar Vinho</a>
 
                 </div>
             </div>
@@ -79,9 +58,8 @@
 
             </div>
         </section>
-
-
-        <!-- modal contato-->
+    </main>
+            <!-- modal contato-->
         <section id="contato">
             <div class="contato-container">
                 <h2>Contate-nos para saber mais</h2>
@@ -99,15 +77,11 @@
 
                     <p>Anna Giazzi | anagazzio@smartStudy.com | RM: 569846 </p>
 
-                    <p>Ana Giazzi | anagazzio@smartStudy.com | RM: 569846 </p>
-
                     <p>Giulia Stella | giuliastella@smartStudy.com | RM: 568888 </p>
                 </div>
             </div>
         </section>
 
-
-    </main>
     <footer>
         <!-- conteudo do rodape da pagina -->
         <div class="footerconteudo">
@@ -133,11 +107,39 @@
         <p class="copyright">© 2026 Vinharia Agnello. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Biblioteca oficial do efeito de bolinhas -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 800, "density": { "enable": true, "value_area": 5400 } },
+                "color": { "value": "#8a0000" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.1, "random": false },
+                "size": { "value": 20, "random": true },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 10,
+                    "color": "#8a0000",
+                    "opacity": 0.01,
+                    "width": 0.1
+                },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" }, /* Conecta ao passar o mouse */
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } } }
+            },
+            "retina_detect": true
+        });
+    </script>
+
 
 <script src="src/js/script.js"></script>
-
-
-
 </body>
 
 </html>
