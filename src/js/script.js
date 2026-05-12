@@ -18,7 +18,7 @@ let quant1 = 0,  quant2 = 0,  quant3 = 0,  quant4 = 0,  quant5 = 0;
  
  
 // cadastro do usuario via prompt
-const botaoUsuario = document.getElementById('abrirCadastre-se');
+const botaoUsuario = document.getElementById('abrirCadastrese');
  
 botaoUsuario.addEventListener('click', function (event) {
     event.preventDefault();
